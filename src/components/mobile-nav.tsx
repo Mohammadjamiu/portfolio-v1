@@ -51,7 +51,7 @@ export function MobileNav() {
             transition={{ duration: 0.2 }}
             className="fixed inset-x-0 top-[64px] bottom-0 z-40 bg-white"
           >
-            <nav className="flex flex-col items-center justify-center h-full space-y-8">
+            <nav className="flex flex-col items-center justify-center h-full space-y-4  ">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -63,7 +63,7 @@ export function MobileNav() {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-3 text-gray-600 hover:text-blue-600"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
                   >
                     {item.icon}
                     <span className="text-lg">{item.name}</span>

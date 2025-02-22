@@ -2,15 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Update the glow animation */
 @keyframes glow {
   0% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.3),
+      inset 0 0 25px rgba(59, 130, 246, 0.2);
   }
   50% {
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 50px rgba(59, 130, 246, 0.4),
+      inset 0 0 50px rgba(59, 130, 246, 0.3);
   }
   100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.3),
+      inset 0 0 25px rgba(59, 130, 246, 0.2);
   }
 }
 
@@ -40,5 +44,45 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.75rem;
+  }
+}
+@layer utilities {
+  .responsive-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem; /* 20px for mobile */
+    padding-right: 1.25rem; /* 20px for mobile */
+  }
+
+  @media (min-width: 640px) {
+    /* sm: */
+    .responsive-container {
+      padding-left: 1.5rem; /* 24px for sm */
+      padding-right: 1.5rem; /* 24px for sm */
+    }
+  }
+
+  @media (min-width: 768px) {
+    /* md: */
+    .responsive-container {
+      padding-left: 2rem; /* 32px for md */
+      padding-right: 2rem; /* 32px for md */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* lg: */
+    .responsive-container {
+      padding-left: 3rem; /* 48px for lg */
+      padding-right: 3rem; /* 48px for lg */
+    }
+  }
+
+  @media (min-width: 1280px) {
+    /* xl: */
+    .responsive-container {
+      padding-left: 4rem; /* 64px for xl */
+      padding-right: 4rem; /* 64px for xl */
+    }
   }
 }
